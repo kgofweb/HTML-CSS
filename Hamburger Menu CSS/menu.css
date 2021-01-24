@@ -1,0 +1,132 @@
+.menu-wrap {
+   position: fixed;
+   top: 0;
+   left: 0;
+   z-index: 1;
+}
+
+.menu-wrap .toggler {
+   position: absolute;
+   top: 15px;
+   left: 15px;
+   width: 30px;
+   height: 30px;
+   cursor: pointer;
+   opacity: 0;
+   z-index: 2;
+}
+
+.menu-wrap .hamburger {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 60px;
+   height: 60px;
+   padding: 1rem;
+   background: var(--primary-color);
+   z-index: 1;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+/* Hamburger line */
+.menu-wrap .hamburger > .line {
+   position: relative;
+   width: 100%;
+   height: 2px;
+   background-color: #fff;
+   border-radius: 50px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   transition: all .5s ease;
+}
+
+/* Top and bottom lines */
+.menu-wrap .hamburger > .line::before,
+.menu-wrap .hamburger > .line::after {
+   content: '';
+   position: absolute;
+   top: -10px;
+   width: 100%;
+   height: 2px;
+   background-color: inherit;
+   border-radius: 50px;
+   z-index: 1;
+}
+
+/* Moves line down */
+.menu-wrap .hamburger > .line::after {
+   top: 10px;
+}
+
+/* Toggler animate */
+.menu-wrap .toggler:checked + .hamburger > .line {
+   transform: rotate(135deg);
+}
+
+/* Turn line into X */
+.menu-wrap .toggler:checked + .hamburger > .line::before,
+.menu-wrap .toggler:checked + .hamburger > .line::after {
+   top: 0;
+   transform: rotate(90deg);
+}
+
+/* Rotate on hover when checked */
+.menu-wrap .toggler:checked:hover + .hamburger > .line {
+   transform: rotate(225deg);
+}
+
+/* Menu */
+.menu-wrap .menu {
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   overflow: hidden;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   /* After clicked */
+   visibility: hidden;
+}
+
+.menu-wrap .menu > .sub-menu {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex: none;
+   width: 180vw;
+   height: 200vw;
+   background: var(--overlay-color);
+   border-radius: 50%;
+   transition: all .5s ease;
+   /* After clicked */
+   transform: scale(0);
+}
+
+.menu-wrap .menu > .sub-menu > div {
+   text-align: center;
+   max-width: 90vw;
+   max-width: 100vh;
+   transition: opacity .5s ease;
+   /* After clicked */
+   opacity: 0;
+}
+
+/* Show the menu */
+.menu-wrap .toggler:checked ~ .menu {
+   visibility: visible;
+}
+
+.menu-wrap .toggler:checked ~ .menu > .sub-menu {
+   transform: scale(1);
+   transition-duration: var(--menu-speed);
+}
+
+.menu-wrap .toggler:checked ~ .menu > .sub-menu > div {
+   opacity: 1;
+   transition: opacity .5s ease;
+}

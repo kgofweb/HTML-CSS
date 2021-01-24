@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+      integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ=" crossorigin="anonymous" />
+   <link rel="stylesheet" href="./main.css">
+   <title>Drowpdown Menu Responsive</title>
+</head>
+
+<body>
+
+   <header>
+      <div class="container">
+         <!-- Check hamburger -->
+         <input type="checkbox" name="" id="check">
+
+         <!-- Logo Title -->
+         <div class="logo-container">
+            <h3 class="logo"><span>Portfolio</span></h3>
+         </div>
+
+         <!-- Main Nav -->
+         <div class="nav-btn">
+            <div class="nav-links">
+               <ul class="main-menu">
+                  <li class="nav-link" style="--i: .6s">
+                     <a href="#">Home</a>
+                  </li>
+                  <li class="nav-link" style="--i: .85s">
+                     <a href="#">Projects <i class="fas fa-caret-down"></i></a>
+                     <div class="dropdown">
+                        <ul>
+                           <li class="dropdown-link">
+                              <a href="#">Html & css</a>
+                           </li>
+                           <li class="dropdown-link">
+                              <a href="#">JavaScript</a>
+                           </li>
+                           <li class="dropdown-link">
+                              <a href="#">Node js</a>
+                           </li>
+                           <li class="dropdown-link">
+                              <a href="#">React JS <i class="fas fa-caret-down"></i></a>
+                              <div class="dropdown second">
+                                 <ul>
+                                    <li class="dropdown-link">
+                                       <a href="#">Web App</a>
+                                    </li>
+                                    <li class="dropdown-link">
+                                       <a href="#">BookList App</a>
+                                    </li>
+                                    <li class="dropdown-link">
+                                       <a href="#">SMS App</a>
+                                    </li>
+                                    <li class="dropdown-link">
+                                       <a href="#">Meteo App</a>
+                                    </li>
+                                    <li class="dropdown-link">
+                                       <a href="#">More <i class="fas fa-caret-down"></i></a>
+                                       <div class="dropdown second">
+                                          <ul>
+                                             <li class="dropdown-link">
+                                                <a href="#">JS Avancé</a>
+                                             </li>
+                                             <li class="dropdown-link">
+                                                <a href="#">React Avancé</a>
+                                             </li>
+                                             <li class="dropdown-link">
+                                                <a href="#">Vue JS</a>
+                                             </li>
+                                             <!-- Triangle -->
+                                             <div class="arrow"></div>
+                                          </ul>
+                                       </div>
+                                    </li>
+                                    <!-- Triangle -->
+                                    <div class="arrow"></div>
+                                 </ul>
+                              </div>
+                           </li>
+                           <!-- Triangle -->
+                           <div class="arrow"></div>
+                        </ul>
+                     </div>
+                  </li>
+                  <li class="nav-link" style="--i: 1.1s">
+                     <a href="#">Services <i class="fas fa-caret-down"></i></a>
+                     <div class="dropdown">
+                        <ul>
+                           <li class="dropdown-link">
+                              <a href="#">Html & css</a>
+                           </li>
+                           <li class="dropdown-link">
+                              <a href="#">JavaScript</a>
+                           </li>
+                           <li class="dropdown-link">
+                              <a href="#">Node js</a>
+                           </li>
+                           <li class="dropdown-link">
+                              <a href="#">React JS <i class="fas fa-caret-down"></i></a>
+                              <div class="dropdown second">
+                                 <ul>
+                                    <li class="dropdown-link">
+                                       <a href="#">Web App</a>
+                                    </li>
+                                    <li class="dropdown-link">
+                                       <a href="#">BookList App</a>
+                                    </li>
+                                    <li class="dropdown-link">
+                                       <a href="#">SMS App</a>
+                                    </li>
+                                    <li class="dropdown-link">
+                                       <a href="#">Meteo App</a>
+                                    </li>
+                                    <li class="dropdown-link">
+                                       <a href="#">More <i class="fas fa-caret-down"></i></a>
+                                       <div class="dropdown second">
+                                          <ul>
+                                             <li class="dropdown-link">
+                                                <a href="#">JS Avancé</a>
+                                             </li>
+                                             <li class="dropdown-link">
+                                                <a href="#">React Avancé</a>
+                                             </li>
+                                             <li class="dropdown-link">
+                                                <a href="#">Vue JS</a>
+                                             </li>
+                                             <!-- Triangle -->
+                                             <div class="arrow"></div>
+                                          </ul>
+                                       </div>
+                                    </li>
+                                    <!-- Triangle -->
+                                    <div class="arrow"></div>
+                                 </ul>
+                              </div>
+                           </li>
+                           <!-- Triangle -->
+                           <div class="arrow"></div>
+                        </ul>
+                     </div>
+                  </li>
+                  <li class="nav-link" style="--i: 1.35s"><a href="#">About</a></li>
+               </ul>
+            </div>
+            <div class="log-sign" style="--i: .8s">
+               <a href="#" class="btn transparent">Login</a>
+               <a href="#" class="btn solid">Signup</a>
+            </div>
+         </div>
+
+         <!-- Hamburger -->
+         <div class="hamburger-menu-container">
+            <div class="hamburger-menu">
+               <div></div>
+            </div>
+         </div>
+      </div>
+   </header>
+   <main>
+      <section>
+         <img src="./img/cover.jpg" alt="background image">
+         <div class="overlay"></div>
+      </section>
+   </main>
+
+   <script src="./main.js"></script>
+</body>
+
+</html>
