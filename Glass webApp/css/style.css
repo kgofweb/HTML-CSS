@@ -1,0 +1,189 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 0.888rem;
+}
+
+h1 {
+  color: #426696;
+  font-weight: 600;
+}
+
+img {
+  max-width: 100%;
+}
+
+.card-info,
+.games-card-percentage {
+  color: #406877;
+}
+
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main .glass .dashboard {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+}
+
+.main {
+  min-height: 100vh;
+  background: linear-gradient(to right top, #65dfc9, #6cdbeb);
+}
+.main .glass {
+  display: flex;
+  width: 60%;
+  min-height: 80vh;
+  background: #fff;
+  background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.3));
+  border-radius: 2rem;
+  backdrop-filter: blur(2rem);
+  z-index: 10;
+}
+.main .glass .dashboard {
+  flex: 1;
+  text-align: center;
+  background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.3));
+  border-radius: 2rem;
+}
+.main .glass .dashboard .dashboard-user-name, .main .glass .dashboard .dashboard-user-description {
+  color: #1A4454;
+}
+.main .glass .dashboard .dashboard-user-img {
+  width: 50%;
+}
+.main .glass .dashboard .dashboard-menu-link {
+  display: flex;
+  align-items: center;
+  margin: 2rem 0;
+}
+.main .glass .dashboard .dashboard-menu-title {
+  padding: 0rem 1rem;
+  font-size: 0.788rem;
+  color: #598C9F;
+  cursor: pointer;
+}
+.main .glass .dashboard .dashboard-menu-title:hover {
+  color: #406877;
+}
+.main .glass .dashboard .dashboard-menu-img {
+  width: 20%;
+}
+.main .glass .dashboard .dashboard-btn {
+  position: relative;
+  padding: 1.8rem;
+  border-radius: 2rem;
+  background: linear-gradient(to right top, #65dfc9, #6cdbeb);
+}
+.main .glass .dashboard .dashboard-btn-text {
+  font-size: 0.9rem;
+  width: 40%;
+  color: #1A4454;
+}
+.main .glass .dashboard .dashboard-btn-img {
+  position: absolute;
+  top: 2%;
+  right: 2%;
+  width: 50%;
+}
+.main .glass .games {
+  flex: 2;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  margin: 3rem 5rem;
+}
+.main .glass .games-status {
+  margin-bottom: 3.5rem;
+}
+.main .glass .games-title {
+  font-size: 1.8rem;
+}
+.main .glass .games-input {
+  background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.3));
+  color: #406877;
+  border-radius: 2rem;
+  outline: none;
+  border: none;
+  padding: 0.3rem;
+  width: 45%;
+}
+.main .glass .games-cards .games-card {
+  display: flex;
+  justify-content: space-between;
+  background: linear-gradient(to left top, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.5));
+  border-radius: 1rem;
+  margin: 2rem 0rem;
+  padding: 2rem;
+  box-shadow: 6px 6px 20px rgba(122, 122, 122, 0.2);
+}
+.main .glass .games-cards .games-card-img {
+  width: 11%;
+}
+.main .glass .games-cards .games-card .card-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-left: 4rem;
+}
+.main .glass .games-cards .games-card .card-info-subtitle {
+  font-size: 0.7rem;
+}
+.main .glass .games-cards .games-card .card-info-progress {
+  position: relative;
+  width: 85%;
+  height: 25%;
+  background: linear-gradient(to right top, #65dfc9, #6cdbeb);
+  border-radius: 1rem;
+  overflow: hidden;
+}
+.main .glass .games-cards .games-card .card-info-progress::after {
+  content: "";
+  position: absolute;
+  left: 55%;
+  width: 100%;
+  height: 100%;
+  background: #ebe9e9;
+  border-radius: 0 1rem 1rem 0;
+}
+.main .glass .games-cards .games-card-percentage {
+  font-weight: 800;
+  background: linear-gradient(to right top, #65dfc9, #6cdbeb);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.circle-1,
+.circle-2 {
+  position: absolute;
+  width: 15rem;
+  height: 15rem;
+  border-radius: 50%;
+  background: #fff;
+  background: linear-gradient(to right bottom, white, rgba(255, 255, 255, 0.1));
+}
+
+.circle-1 {
+  top: 3%;
+  right: 15%;
+}
+
+.circle-2 {
+  bottom: 3%;
+  left: 15%;
+}
+
+/*# sourceMappingURL=style.css.map */

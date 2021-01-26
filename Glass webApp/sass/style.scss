@@ -1,0 +1,206 @@
+@import 'config';
+
+.main {
+   @extend %main-display;
+   min-height: 100vh;
+   background: linear-gradient(to right top, #65dfc9, #6cdbeb);
+
+   // Glass
+   .glass {
+      display: flex;
+      width: 60%;
+      min-height: 80vh;
+      background: #fff;
+      background: linear-gradient(
+         to right bottom,
+         rgba(255, 255, 255, .7),
+         rgba(255, 255, 255, .3)
+      );
+      border-radius: 2rem;
+      backdrop-filter: blur(2rem);
+      z-index: 10;
+
+      // Dashboard
+      .dashboard {
+         flex: 1;
+         @extend %display;
+         text-align: center;
+         background: linear-gradient(to right bottom,
+               rgba(255, 255, 255, .7),
+               rgba(255, 255, 255, .3));
+         border-radius: 2rem;
+
+         // User
+         .dashboard-user {
+            &-name,
+            &-description {
+               color: #1A4454;
+            }
+
+            &-img {
+               width: 50%;
+            }
+         }
+
+         // Menu
+         .dashboard-menu {
+            &-link {
+               display: flex;
+               align-items: center;
+               margin: 2rem 0;
+            }
+
+            &-title {
+               padding: 0rem 1rem;
+               font-size: .788rem;
+               color: #598C9F;
+               cursor: pointer;
+
+               &:hover {
+                  color: #406877;
+               }
+            }
+
+            &-img {
+               width: 20%;
+            }
+         }
+
+         // Button
+         .dashboard-btn {
+            position: relative;
+            padding: 1.8rem;
+            border-radius: 2rem;
+            background: linear-gradient(to right top, #65dfc9, #6cdbeb);
+
+            &-text {
+               font-size: .900rem;
+               width: 40%;
+               color: #1A4454;
+            }
+
+            &-img {
+               position: absolute;
+               top: 2%;
+               right: 2%;
+               width: 50%;
+            }
+         }
+      }
+
+      // Games
+      .games {
+         flex: 2;
+         display: flex;
+         justify-content: space-evenly;
+         flex-direction: column;
+         margin: 3rem 5rem;
+
+         &-status {
+            margin-bottom: 3.5rem;
+         }
+
+         &-title {
+            font-size: 1.8rem;
+         }
+
+         &-input {
+            background: linear-gradient(to right bottom,
+                  rgba(255, 255, 255, .7),
+                  rgba(255, 255, 255, .3));
+            color: #406877;
+            border-radius: 2rem;
+            outline: none;
+            border: none;
+            padding: .3rem;
+            width: 45%;
+         }
+
+         // Cards
+         &-cards {
+
+            .games-card {
+               display: flex;
+               justify-content: space-between;
+               background: linear-gradient(to left top,
+               rgba(255, 255, 255, .8),
+               rgba(255, 255, 255, .5)
+               );
+               border-radius: 1rem;
+               margin: 2rem 0rem;
+               padding: 2rem;
+               box-shadow: 6px 6px 20px rgba(122, 122, 122, .2);
+
+               // Image
+               &-img {
+                  width: 11%;
+               }
+
+               .card-info {
+                  flex: 1;
+                  display: flex;
+                  flex-direction: column;
+                  justify-content: space-between;
+                  margin-left: 4rem;
+
+                  &-subtitle {
+                     font-size: .700rem;
+                  }
+
+                  &-progress {
+                     position: relative;
+                     width: 85%;
+                     height: 25%;
+                     background: linear-gradient(to right top, #65dfc9, #6cdbeb);
+                     border-radius: 1rem;
+                     overflow: hidden;
+
+                     &::after {
+                        content: '';
+                        position: absolute;
+                        left: 55%;
+                        width: 100%;
+                        height: 100%;
+                        background: rgb(235, 233, 233);
+                        border-radius: 0 1rem 1rem 0;
+                     }
+                  }
+               }
+
+               // Percentage
+               &-percentage {
+                  font-weight: 800;
+                  background: linear-gradient(to right top, #65dfc9, #6cdbeb);
+                  -webkit-background-clip: text;
+                  -webkit-text-fill-color: transparent;
+               }
+            }
+         }
+      }
+   }
+}
+
+// Circle
+.circle-1,
+.circle-2 {
+   position: absolute;
+   width: 15rem;
+   height: 15rem;
+   border-radius: 50%;
+   background: #fff;
+   background: linear-gradient(
+      to right bottom,
+      rgba(255, 255, 255, 1),
+      rgba(255, 255, 255, .1)
+   );
+}
+
+.circle-1 {
+   top: 3%;
+   right: 15%;
+}
+
+.circle-2 {
+   bottom: 3%;
+   left: 15%;
+}
