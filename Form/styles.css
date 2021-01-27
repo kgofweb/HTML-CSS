@@ -1,0 +1,111 @@
+*, ::before, ::after {
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, sans-serif;
+}
+
+body {
+   background: #444444;
+   height: 100vh;
+}
+
+a {
+   text-decoration: none;
+   color: rgb(68, 149, 241);
+}
+
+/* Form */
+.form {
+   position: absolute;
+   top: 40%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+}
+
+/* Form bloc */
+.form-bloc {
+   width: 400px;
+   height: 440px;
+   border-radius: 3px;
+   padding: 1rem 1.5rem;
+   background-color: #F1F1F1;
+}
+
+.form-bloc > h1 {
+   text-align: center;
+   padding-bottom: 2rem;
+   color: rgb(68, 149, 241);
+}
+
+/* Form group */
+.form-group {
+   position: relative;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.form-group > label {
+   position: absolute;
+   left: 15px;
+   background-color: #F1F1F1;
+   padding: 0px 5px;
+   color: #444444;
+}
+
+.form-group > input {
+   width: 100%;
+   margin: 20px 0;
+   padding: 12px 15px;
+   border: 2px solid rgb(68, 149, 241);
+   border-radius: 3px;
+   outline: none;
+   background: none;
+}
+
+/* Remember */
+.field-remember {
+   display: flex;
+   justify-content: space-between;
+}
+
+/* Send */
+.send {
+   margin-top: 1.2rem;
+}
+
+.send > button {
+   width: 40%;
+   padding: .5rem;
+   background: rgb(68, 149, 241);
+   outline: none;
+   border: none;
+   border-radius: 3px;
+   color: #FFF;
+   font-weight: bold;
+   cursor: pointer;
+   transition: .5s;
+}
+
+button:hover {
+   background: rgb(22, 123, 238);
+}
+
+/* Animation form label */
+.form-group:focus-within > label, 
+.form-group.animation > label {
+   transform: translateY(-23px);
+   transition: .6s;
+}
+
+.form-group:focus-within > input,
+.form-group.animation > input {
+   border: 2px solid #9b59b6;
+}
+
+.form-bloc:focus-within > h1,
+.form-bloc.animation > h1 {
+   color: #9b59b6;
+   transition: .5s;
+}
